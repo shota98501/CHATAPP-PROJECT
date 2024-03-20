@@ -1,8 +1,8 @@
 
-import {useRef} from "useRef"
+import {useRef, useState, useEffect} from "react"
 import { useOnClickOutside } from "usehooks-ts"
 
-function Component(){
+function Menu(props){
     const ref = useRef(null)
 
     const handleClickOutside =() =>{
@@ -17,6 +17,15 @@ function Component(){
 
     useOnClickOutside(ref, handleClickOutside)
 
+    componentDidMount(
+        window.addEventListener('mousedown',props.onClickOutside)
+    )
+
+    conponentWillUnmount(
+        window.removeEventListener('mousedown',props.onClickOutside)
+
+    )
+
     return(
         <button
         ref={ref}
@@ -26,6 +35,7 @@ function Component(){
     )
 }
 
+export default Menu;
     
 
         
