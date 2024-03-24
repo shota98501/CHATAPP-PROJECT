@@ -9,11 +9,7 @@ function Menu(props){
         console.log('clicked outside')
 
     }
-
-    const handleClickInside =() =>{
-        console.log('clicked inside')
-        
-    }
+    
 
     useOnClickOutside(ref, handleClickOutside)
 
@@ -36,7 +32,8 @@ function Menu(props){
             <h2>My menu</h2>
 
             <ul className="menu">
-                <li><button onClick={() =>{
+                <li>
+                    <button onClick={() =>{
                     if(props.onClose){
                         props.onClose();
                     }
