@@ -3,7 +3,8 @@ import {useRef} from 'react'
 import { useOnClickOutside } from "usehooks-ts";
 
 function UseMenu(props){
-    const ref = useRef(null)
+return props.onClickOutside;
+}
 
     const handleClickOutside =() => {
     // your custom logic here
@@ -19,7 +20,7 @@ function UseMenu(props){
 
     return
 
-}
+
 
 export default UseMenu;
 
