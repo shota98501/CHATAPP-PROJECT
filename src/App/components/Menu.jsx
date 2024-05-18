@@ -3,7 +3,10 @@ import {useRef} from 'react'
 import { useOnClickOutside } from "usehooks-ts";
 
 function UseMenu(props){
-return props.onClickOutside;
+    const onClickOutside=props.onClickOutside 
+    if(onClickOutside){
+        
+    }
 }
 
     const handleClickOutside =() => {
