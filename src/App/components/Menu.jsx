@@ -4,10 +4,38 @@ import { useOnClickOutside } from "usehooks-ts";
 
 function UseMenu(props){
     const onClickOutside=props.onClickOutside 
-    if(onClickOutside){
+    
+
+        if(props.ref && !props.ref.contains){
+            if(props.onClose){
+                props.onClose()
+            }
+        }
+
+        componetDidMouunt(){
+            window.addEventListener('mousedown', this.onClickOutside);
+        }
+
+        componetWillMouunt(){
+            window.removeEventListener('mousedown', this.onClickOutside);
+        }
+
+        return
+        
+
+        
+
+
+
+
+
+
+
         
     }
-}
+
+    
+    
 
     const handleClickOutside =() => {
     // your custom logic here
