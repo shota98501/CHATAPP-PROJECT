@@ -1,6 +1,4 @@
 import React from "react";
-import {useRef} from 'react'
-import { useOnClickOutside } from "usehooks-ts";
 
 function UseMenu(props){
     const onClickOutside=props.onClickOutside 
@@ -20,39 +18,40 @@ function UseMenu(props){
             window.removeEventListener('mousedown', this.onClickOutside);
         }
 
-        return{
+        const store = props;
+
+        const user = store.getCurrentUser();
+
+        return(
+            <div className="user-menu" ref={(ref) => props.ref = ref}>
+                {user ? <div>
+                    <h2>My menu</h2>
+                    <ul className="menu">
+                        <li>button OnClick={() =>{
+                            if(props.onClose){
+                                props.onClose();
+                            }
+                            store.signOut();
+
+
+                        }type="button">Sign Out</li>
+                    </ul>
+
+                </div> : null}
+
+                
+            </div>
+        )
+        
             
         }
-        
+    
 
-        
-
-
-
-
-
-
-
-        
-    }
 
     
     
 
-    const handleClickOutside =() => {
-    // your custom logic here
-    console.log('clicked outside')
-}
-
-    const handleClickInside = () =>{
-        // your custom logic here
-        console.log('clicked inside')    
-    }
-
-    useOnClickOutside(ref, handleClickOutside)
-
-    return
-
+   
 
 
 export default UseMenu;
