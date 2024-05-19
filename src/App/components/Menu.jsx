@@ -12,15 +12,17 @@ function UseMenu(props){
             }
         }
 
-        componetDidMouunt(){
+        componetDidMouunt();{
             window.addEventListener('mousedown', this.onClickOutside);
         }
 
-        componetWillMouunt(){
+        componetWillMouunt();{
             window.removeEventListener('mousedown', this.onClickOutside);
         }
 
-        return
+        return{
+            
+        }
         
 
         
