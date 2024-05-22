@@ -24,35 +24,29 @@ function UseMenu(props){
 
         return(
             <div className="user-menu" ref={(ref) => props.ref = ref}>
-                {user ? <div>
+                 <div>
                     <h2>My menu</h2>
                     <ul className="menu">
-                        <li>button OnClick={() =>{
+                        <li>
+                            <button OnClick={() =>{
                             if(props.onClose){
                                 props.onClose();
                             }
                             store.signOut();
 
 
-                        }type="button">Sign Out</li>
+                            }}type="button">Sign Out</button></li>
                     </ul>
 
-                </div> : null}
+                </div>
 
-                
+             
             </div>
         )
+    
         
             
         }
     
-
-
-    
-    
-
-   
-
-
 export default UseMenu;
 
