@@ -14,7 +14,7 @@ function UseMenu(props){
             window.addEventListener('mousedown', this.onClickOutside);
         }
 
-        componetWillMouunt();{
+        componetWillUnmouunt();{
             window.removeEventListener('mousedown', this.onClickOutside);
         }
 
