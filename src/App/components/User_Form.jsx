@@ -17,13 +17,11 @@ function UserForm(props){
     const onTextFieldChange = props.onTextFieldChange
     const onClickOutside = props.onClickOutside;
 
-    onClickOutside{
         if(props.ref && ! props.ref.contains){
             if(props.onClose){
                 props.onClose();
             }
         }
     }
-}
 
 export default UserForm;
