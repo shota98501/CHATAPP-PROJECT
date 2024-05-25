@@ -15,7 +15,9 @@ function UserForm(props){
     
     const onSubmit = props.onSubmit;
     const onTextFieldChange = props.onTextFieldChange
+    const onClickOutside = props.onClickOutside;
 
+    if
 }
 
 export default UserForm;
